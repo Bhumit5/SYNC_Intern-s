@@ -1,0 +1,417 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+.btn {
+  padding: 15px 45px;
+  background-color: #ff44ab;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #ff1494;
+  cursor: pointer;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/*~ Preview section */
+#items {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  margin-right: 18%;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#items li {
+  position: relative;
+  margin-left: 5%;
+  width: fit-content;
+}
+
+#items li:after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: right bottom;
+  background-color: #ff1494;
+  bottom: -40%;
+  left: -5%;
+  transition: all 1s ease-in-out;
+}
+
+#items li:hover {
+  color: #ff75c1;
+  cursor: pointer;
+}
+
+#items li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  height: 3px;
+}
+
+#preview {
+  height: 600px;
+  padding-top: 2%;
+  background-color: rgb(56, 40, 173);
+}
+
+#product {
+  padding: 0 0 5% 10%;
+}
+
+#description {
+  margin-top: 10%;
+  color: #fff;
+}
+
+#description p {
+  font-size: 1.1rem;
+  margin-bottom: 2%;
+  letter-spacing: 2px;
+}
+
+#head-line {
+  font-size: 5rem;
+  margin-bottom: 3px;
+}
+
+
+#prod-add{
+  position: relative;
+}
+
+#product-img{
+  position: absolute;
+  margin: 5% 0;
+  left: -14%;
+  width: 90%;
+}
+
+#bg-circle {
+  width: 82%;
+}
+
+#playstation-img{
+  left: 19%;
+  position: absolute;
+  top: 28%;
+}
+
+#play-station {
+  transform: rotate(5deg);
+  width: 100%;
+}
+
+/*~ Feature section  */
+#feature {
+  position: relative;
+  background-color: rgba(225, 225, 225, 1);
+}
+
+#f-div{
+  position: absolute;
+}
+
+#feature:before {
+  position: absolute;
+  content: url("./Images/square.png");
+  transform: scale(0.3);
+  top: -36%;
+}
+
+#feature:after {
+  position: absolute;
+  content: url("./Images/triangle.png");
+  transform: scale(0.25) rotate(51deg);
+  bottom: -36%;
+  right: 3%;
+  z-index: 3;
+}
+
+.heading {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-top: 2%;
+  z-index: 1;
+}
+
+.bg-text:before {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  top: 55%;
+  left: 43%;
+  color: #0000000f;
+}
+
+#f-heading:before {
+  content: "FEATURES";
+  left: 42%;
+}
+
+#feature-desc {
+  padding: 5% 10%;
+}
+
+#feature-desc p {
+  margin-top: 20%;
+  font-size: 1.2rem;
+  width: 85%;
+}
+
+/*~ Feature section  */
+#details {
+  position: relative;
+}
+
+#details:before {
+  content: url("./Images/circle.png");
+  position: absolute;
+  transform: scale(0.6);
+  left: -17%;
+  top: 0;
+}
+
+#d-heading:before {
+  content: "DETAILS";
+}
+
+#details-img {
+  width: 125%;
+}
+
+.details-desc {
+  position: relative;
+  padding-left: 30%;
+}
+
+.d-points:before,
+.d-points:after {
+  position: absolute;
+  font-size: 6rem;
+  font-weight: bolder;
+  color: #0000000f;
+}
+
+#d-1::before {
+  content: "1";
+  top: 3%;
+  left: 21%;
+}
+
+#d-2::after {
+  content: url("./Images/circle.png");
+  left: 22%;
+  top: 24%;
+  transform: scale(0.2);
+  filter: opacity(0.15) grayscale(1);
+}
+
+#d-2::before {
+  content: "2";
+  left: 22%;
+  bottom: 7%;
+}
+
+#d-3::before {
+  content: "3";
+  top: 10%;
+  right: 5%;
+}
+
+#d-3::after {
+  content: url("./Images/triangle.png");
+  right: 16%;
+  top: 0%;
+  transform: scale(0.2) rotate(45deg);
+  filter: opacity(0.15) grayscale(1);
+}
+
+#d-4::before {
+  content: "4";
+  bottom: -2%;
+  right: 9%;
+}
+
+/*~ Promo section  */
+#promo {
+  position: relative;
+  height: 400px !important;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+iframe:hover {
+  opacity: 1;
+}
+
+#promo-vid::after {
+  content: url("./Images/square.png");
+  position: absolute;
+  top: 40%;
+  left: -3%;
+  transform: scale(0.3);
+  z-index: 4;
+}
+
+#preorder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(0, rgba(0, 0, 255, 0.534), rgba(0, 0, 255, 0.534)),
+    url("./Images/play.jpg");
+}
+
+#preorder p {
+  width: 50%;
+  font-size: 1.2rem;
+  margin-bottom: 5%;
+}
+
+/*~ Pricing section  */
+#pricing {
+  padding: 0 10%;
+  height: auto;
+  padding-bottom: 5%;
+}
+
+#p-heading::before {
+  content: "PRICING";
+  left: 42%;
+}
+
+.prod-detail {
+  position: relative;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.product-img {
+  width: 100%;
+  margin-top: 20%;
+}
+
+#main-img {
+  margin-top: 10%;
+}
+
+.p-name {
+  font-weight: bold;
+}
+
+.price {
+  position: relative;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #ff1494;
+}
+
+.price:before {
+  position: absolute;
+  content: "$";
+  font-size: 12px;
+  top: 9%;
+  left: 44%;
+}
+
+.price:after {
+  position: absolute;
+  content: "99";
+  font-size: 12px;
+  top: 9%;
+  right: 43%;
+}
+
+.container {
+  position: relative;
+}
+
+.card {
+  position: relative;
+  border: 2px solid #0000000f;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  margin: 0 20%;
+  padding: 3%;
+}
+
+.card:before {
+  position: absolute;
+  content: url("./Images/circle.png");
+  transform: scale(0.15);
+  bottom: 51%;
+  right: -15%;
+}
+
+.card:after {
+  position: absolute;
+  content: url("./Images/triangle.png");
+  transform: scale(0.16) rotate(-20deg);
+  top: 51%;
+  left: -15%;
+}
+
+.card li {
+  list-style-type: disc;
+  color: #ff1494;
+  font-size: 1rem;
+  margin: 10% 0;
+}
+
+li:marker {
+  font-size: 10px;
+}
+
+li span {
+  color: black;
+}
+
+/*~ Footer section  */
+footer {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding-bottom: 1%;
+  height: 80px;
+  background-color: rgba(225, 225, 225, 1);
+  letter-spacing: 1px;
+  color: #0000008b;
+}
+
+#icons {
+  margin-top: 0.6%;
+}

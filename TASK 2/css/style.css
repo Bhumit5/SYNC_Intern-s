@@ -1,0 +1,112 @@
+/** Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Philosopher&display=swap');
+
+*{
+    font-family: 'Bree Serif', serif;
+}
+
+body{
+    background:url("/Images/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+/** General classes  */
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 5px 20px;
+    background-color: #8f69ff;
+    color: white;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    outline-style: groove;
+    outline-width: 2px;
+    outline-offset: 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #7243ff;
+    cursor: pointer;
+    outline-style: solid;
+    outline-offset: 2px;
+}
+
+/** Container that having content  */
+.page-block{
+    background-color: rgba(142, 151, 255, 0.675);
+    height: 100vh;
+    position: relative;
+}
+
+.information{
+    height: 85%;
+    width: 60%;
+    background-color: #48474a;
+    flex-direction: column;
+    color: white;
+    box-shadow: 20px 20px 2px rgba(0, 0, 0, 0.375);
+    border-radius: 10px;
+}
+
+.information::before{
+    position: absolute;
+    content: url('/Images/semi.png');
+    top: 0%;
+    left: 4.3%;
+    transform: scale(0.3) rotate(180deg);
+
+}
+
+.information::after{
+    position: absolute;
+    content: url('/Images/semi.png');
+    bottom: -10%;
+    right: 4.3%;
+    transform: scale(0.3);
+}
+
+/** Text in container  */
+#welcome{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+#welcome-text{
+    text-align: center;
+    font-style: italic;
+    width: 40%;
+}
+
+/** Rules  */
+#rules{
+    font-family: 'Philosopher', sans-serif;
+}
+
+legend{
+    padding: 0 10px;
+}
+
+fieldset{
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px 0 5px 25px;
+    margin-bottom: 4rem;
+}
+
+fieldset li{
+    margin: 10px 0;
+    list-style-type: circle;
+}
+
+a{
+    text-decoration: none;
+}
