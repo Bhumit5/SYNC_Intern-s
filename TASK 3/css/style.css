@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --l-color:#F07900;
+}
+
+body{
+    height:100vh;
+    background-color: rgb(49, 49, 49);
+    
+}
+
+.flex-c{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+#music-player{
+    width:75%;
+    height: 80%;
+    border: 2px solid rgba(0, 0, 0, 0.677);
+    box-shadow: 0 5px 20px 20px rgba(25, 24, 24, 0.553);
+}
+
+#control{
+    flex-direction: column;   
+}
+
+#control div{
+    margin: 8% 0;
+}
+
+#player{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+}
+
+#preview{
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+}
+
+#image{
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 20px rgba(25, 24, 24, 0.553);
+}
+
+#info{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+#title{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/*~ Volume control  */
+#volume-slide{
+    margin: 8% 0 !important;
+    width:90%;
+    border: 2px solid var(--l-color);
+    height: 8%;
+    background-color: #0b0b0b;
+
+}
+
+#volume{
+    width:100%;
+    margin: 0 0 0 1%;
+    background: rgba(69, 69, 69, 0.851);
+}
+
+#v-bar{
+    width: 80%;
+    border-left: 2px solid var(--l-color);
+    border-right: 2px solid var(--l-color);
+    margin: 0 2%;
+    height: 100%;
+    padding: 0 2%;
+}
+
+.fa{
+    font-size: 25px !important;
+}
+
+#volume_icon{
+    color: white;
+    width: 30px;
+}
+
+
+.fa-step-backward,.fa-step-forward{
+    font-size: 20px !important;
+}
+
+#show_volume{
+    font-size: 1.2rem;
+    color: white;
+    width: 30px;
+    text-align: center;
+}
+
+
+/*~ Slider  */
+.slider{
+    width: 100%;
+    text-align: center;
+    margin: 0 !important;
+}
+
+#auto{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 5px;
+    background-color: #db9650;
+}
+
+button{
+    cursor: pointer;
+}
+
+#auto i{
+    margin: 0 5px;
+}
+
+input[type='range']{
+    -webkit-appearance: none;
+    width: 95%;
+    height: 10px;
+    border-radius: 15px;
+    background: black;
+    cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--l-color);
+    border-radius: 100%;
+}
+
+/*~ Buttons  */
+.btn{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: var(--l-color);
+}
+
+button{
+    margin:0 20px;
+    text-align: center;
+}
+
+#pl-btn{
+    margin-bottom:10px;
+}
+
+#n-btn,#p-btn{
+    height: 40px;
+    width: 40px;
+}

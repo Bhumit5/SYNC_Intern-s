@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body class="flex-c">
+    <!--? Music Player   -->
+    <section id="music-player">
+      <div id="player">
+        <!--? Preview of music  -->
+        <div id="preview" class="flex-c">
+          <div class="disc flex-c">
+            <img src="/image/mahadevay.jpg" id="image" />
+          </div>
+
+          <div class="slider flex-c" id="volume-slide">
+            
+            <i class="fa fa-volume-up" onclick="mute_sound()" style="cursor: pointer;" id="volume_icon"></i>
+            
+            <div id="v-bar" class="flex-c">
+              <input type="range" id="volume" value="100" onchange="set_volume()" oninput="color()">
+            </div>
+            <p id="show_volume">100</p>
+          </div>
+
+        </div>
+        
+        <!-- ? Control buttons -->
+        <div id="control" class="flex-c">
+          <!--~ Information about song  -->
+          <div id="info">
+            <p id="title">Vishweshwaraya Mahadevaya</p>
+            <p id="artist">Patel</p>
+          </div>
+
+          <!--~ Progress bar of song  -->
+          <div class="slider">
+            <div id="duration">
+              <input type="range" class="range-input" id="progress" value="0" min="0" max="100" onchange="change_duration()"/>
+            </div>
+            <button id="auto" onclick="auto_play()"> Auto Play <i class="fa fa-circle-o-notch"></i></button>
+          </div>
+
+          <!--~ Change the songs -->
+          <div id="buttons" class="flex-c">
+            <div id="prev">
+              <button id="p-btn" class="btn">
+                <i class="fa fa-step-backward"></i>
+              </button>
+            </div>
+            <div id="play">
+              <button id="pl-btn" class="btn">
+                <i class="fa fa-play" style="margin-left: 7px"></i>
+              </button>
+            </div>
+            <div id="next">
+              <button id="n-btn" class="btn">
+                <i class="fa fa-step-forward"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
